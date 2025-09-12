@@ -1,264 +1,221 @@
-# 🧩 Puzzle Game
+# 🧩 Puzzle Game / 拼图游戏
 
 A modern Qt-based puzzle game application with multiple difficulty levels, game modes, and networking features. Built with C++ and Qt framework.
 
-## 🎮 Features
+基于Qt框架开发的现代拼图游戏应用，支持多种难度级别、游戏模式和网络功能。使用C++和Qt框架构建。
 
-### Core Gameplay
-- **Multiple Game Modes**:
+---
+
+## 🎮 Features / 游戏特性
+
+### Core Gameplay / 核心功能
+- **Multiple Game Modes** / **多种游戏模式**:
   - Standard Puzzle: 3x3, 4x4, 8x8 grid sizes and custom (2x2 to 10x10)
   - Irregular Puzzle: 8 different shapes including triangles, pentagons, hexagons, circles
   - Jigsaw Puzzle: Classic tab-and-blank puzzle pieces
   - Custom Mode: Use your own images
+  - 标准拼图：支持 3x3、4x4、8x8 网格大小和自定义（2x2到10x10）
+  - 异形拼图：包含三角形、五边形、六边形、圆形等8种形状
+  - 拼图拼图：经典凸凹拼图块
+  - 自定义模式：使用您自己的图片
 
-- **Interactive Controls**:
+- **Interactive Controls** / **交互操作**:
   - Drag & drop puzzle pieces
   - Right-click rotation (90° increments)
   - Smart piece snapping
   - Real-time progress tracking
+  - 拖拽移动拼图块
+  - 右键旋转拼图块（90度增量）
+  - 智能吸附功能
+  - 实时进度显示
 
-- **Audio System**:
+- **Audio System** / **音效系统**:
   - Background music (MP3 support)
   - Sound effects for moves, rotations, and correct placements
   - Volume control
+  - 背景音乐（MP3支持）
+  - 移动、旋转和正确放置的音效
+  - 音量控制
 
-- **Game Assistance**:
+- **Game Assistance** / **游戏辅助**:
   - Timer and move counter
   - Progress bar
   - Reference image display
   - Game instructions
+  - 计时器和步数统计
+  - 进度条显示
+  - 参考图片显示
+  - 游戏说明
 
-### Network Features
-- User login/registration system
-- Online leaderboards (time, moves, level rankings)
-- Client-server architecture
-- Multiplayer support infrastructure
+### Network Features / 网络功能
+- User login/registration system / 用户登录/注册系统
+- Online leaderboards (time, moves, level rankings) / 在线排行榜（时间、步数、等级排行）
+- Client-server architecture / 客户端-服务器架构
+- Multiplayer support infrastructure / 多人游戏支持架构
 
-## 🛠️ Technology Stack
+---
 
-- **Framework**: Qt 6.6+ (C++17)
-- **Build System**: qmake + Make
-- **Multimedia**: QMediaPlayer, QAudioOutput
-- **Networking**: Custom TCP protocol
-- **Graphics**: QGraphicsScene, QGraphicsView
-- **Platform Support**: macOS, Windows, Linux
+## 🛠️ Technology Stack / 技术栈
 
-## 📦 Installation
+- **Framework** / **开发框架**: Qt 6.6+ (C++17)
+- **Build System** / **构建系统**: qmake + Make
+- **Multimedia** / **多媒体**: QMediaPlayer, QAudioOutput
+- **Networking** / **网络**: Custom TCP protocol / 自定义TCP协议
+- **Graphics** / **图形**: QGraphicsScene, QGraphicsView
+- **Platform Support** / **平台支持**: macOS, Windows, Linux
 
-### Prerequisites
-- Qt 6.6 or higher
-- C++17 compatible compiler
-- macOS/Windows/Linux operating system
+---
 
-### Build Instructions
+## 📦 Installation / 安装
 
-#### Using Qt Creator
-1. Open Qt Creator
-2. Open project `PuzzleGame.pro`
-3. Select build kit (recommended Qt 6.6+)
-4. Build and run
+### Prerequisites / 环境要求
+- Qt 6.6 or higher / Qt 6.6或更高版本
+- C++17 compatible compiler / C++17兼容的编译器
+- macOS/Windows/Linux operating system / macOS/Windows/Linux操作系统
 
-#### Using Command Line
+### Build Instructions / 构建步骤
+
+#### Using Qt Creator / 使用Qt Creator
+1. Open Qt Creator / 打开Qt Creator
+2. Open project `PuzzleGame.pro` / 打开项目`PuzzleGame.pro`
+3. Select build kit (recommended Qt 6.6+) / 选择构建套件（推荐Qt 6.6+）
+4. Build and run / 构建并运行
+
+#### Using Command Line / 使用命令行
 ```bash
-# Generate Makefile
+# Generate Makefile / 生成Makefile
 qmake PuzzleGame.pro
 
-# Build project
+# Build project / 构建项目
 make
 
-# Run the application
-# Debug version
+# Run the application / 运行应用程序
+# Debug version / Debug版本
 ../debug/PuzzleGame
 
-# Release version  
+# Release version / Release版本  
 ../release/PuzzleGame
 ```
 
-### Build Configuration
-The project supports multiple build configurations:
-- **Debug**: With debug symbols, outputs to `../debug/`
-- **Release**: Optimized version, outputs to `../release/`
-- **Profile**: Performance analysis version
+### Build Configuration / 构建配置
+The project supports multiple build configurations / 项目支持多种构建配置:
+- **Debug**: With debug symbols, outputs to `../debug/` / 包含调试信息，输出到`../debug/`
+- **Release**: Optimized version, outputs to `../release/` / 优化版本，输出到`../release/`
+- **Profile**: Performance analysis version / 性能分析版本
 
-## 📁 Project Structure
+---
+
+## 📁 Project Structure / 项目结构
 
 ```
 puzzle-game/
-├── src/                    # Source code
-│   ├── core/              # Core game logic
-│   ├── ui/                # User interface components  
-│   ├── network/           # Network functionality
-│   └── utils/             # Utility functions
-│   ├── main.cpp           # Application entry point
-│   ├── DlgMenu.*          # Main menu interface
-│   ├── play4x4.*          # Standard puzzle game
-│   ├── IrregularPuzzle.*  # Irregular puzzle game
-│   ├── JigsawPuzzle.*     # Jigsaw puzzle base class
-│   ├── NetworkClient.*    # Network client
-│   └── help.*             # Help system
-├── res/                   # Resources
-│   ├── img/               # Image resources
-│   ├── sounds/            # Sound files
-│   └── img.qrc            # Resource configuration
-├── docs/                  # Documentation
-├── tests/                 # Unit tests
-├── examples/              # Example configurations
-├── build/                 # Build artifacts (gitignored)
-├── PuzzleGame.pro         # Project configuration
-└── README.md              # Project documentation
+├── src/                    # Source code / 源代码
+│   ├── core/              # Core game logic / 核心游戏逻辑
+│   ├── ui/                # User interface components / 用户界面组件  
+│   ├── network/           # Network functionality / 网络功能
+│   └── utils/             # Utility functions / 工具函数
+│   ├── main.cpp           # Application entry point / 应用程序入口
+│   ├── DlgMenu.*          # Main menu interface / 主菜单界面
+│   ├── play4x4.*          # Standard puzzle game / 标准拼图游戏
+│   ├── IrregularPuzzle.*  # Irregular puzzle game / 异形拼图游戏
+│   ├── JigsawPuzzle.*     # Jigsaw puzzle base class / 拼图游戏基类
+│   ├── NetworkClient.*    # Network client / 网络客户端
+│   └── help.*             # Help system / 帮助系统
+├── res/                   # Resources / 资源文件
+│   ├── img/               # Image resources / 图片资源
+│   ├── sounds/            # Sound files / 音效文件
+│   └── img.qrc            # Resource configuration / 资源配置
+├── docs/                  # Documentation / 文档
+├── tests/                 # Unit tests / 单元测试
+├── examples/              # Example configurations / 示例配置
+├── build/                 # Build artifacts (gitignored) / 构建产物（git忽略）
+├── PuzzleGame.pro         # Project configuration / 项目配置
+└── README.md              # Project documentation / 项目文档
 ```
 
-## 🚀 快速开始
+---
 
-### 环境要求
-- Qt 6.0 或更高版本
-- C++17 支持的编译器
-- macOS/Windows/Linux 操作系统
+## 🎯 How to Play / 游戏玩法
 
-### 构建步骤
+### Standard Puzzle Mode / 标准拼图模式
+1. Select difficulty level (3x3, 4x4, 8x8) / 选择难度级别（3x3、4x4、8x8）
+2. Choose image (built-in or custom) / 选择图片（内置或自定义）
+3. Drag pieces to correct positions / 拖拽拼图块到正确位置
+4. Right-click to rotate pieces / 右键旋转拼图块
+5. Complete all pieces to win / 完成所有拼图块即可获胜
 
-#### 使用 Qt Creator
-1. 打开 Qt Creator
-2. 打开项目 `PuzzleGame.pro`
-3. 选择构建套件（推荐 Qt 6.9.2）
-4. 点击构建并运行
+### Controls / 操作说明
+- **Left-click drag**: Move pieces / 左键拖拽：移动拼图块
+- **Right-click**: Rotate 90° / 右键点击：旋转90度
+- **Reference image**: Click "Show Original" / 参考图片：点击"显示原图"
+- **Restart**: Click "Restart Game" / 重新开始：点击"重新开始"
+- **Return to menu**: Click "Back" / 返回菜单：点击"返回"
 
-#### 使用命令行
+---
+
+## 🧪 Testing / 测试
+
+Run the test suite / 运行测试套件:
 ```bash
-# 生成 Makefile
-qmake PuzzleGame.pro
-
-# 编译项目
+# Build tests / 构建测试
+qmake PuzzleGame.pro CONFIG+=test
 make
 
-# 运行程序（根据构建模式选择）
-# Debug 版本
-../debug/PuzzleGame
-
-# Release 版本
-../release/PuzzleGame
+# Run tests / 运行测试
+./tests/run_tests.sh
 ```
 
-### 构建配置
-项目支持多种构建配置：
-- **Debug**：包含调试信息，输出到 `../debug/`
-- **Release**：优化版本，输出到 `../release/`
-- **Profile**：性能分析版本
+---
 
-## 🎯 游戏玩法
+## 🤝 Contributing / 贡献
 
-### 标准拼图模式
-1. 选择难度级别（3x3、4x4、8x8）
-2. 选择图片（内置图片或自定义图片）
-3. 拖拽拼图块到正确位置
-4. 右键点击拼图块进行旋转
-5. 完成所有拼图块即可获胜
+1. Fork the repository / Fork仓库
+2. Create a feature branch / 创建功能分支 (`git checkout -b feature/amazing-feature`)
+3. Commit your changes / 提交更改 (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch / 推送到分支 (`git push origin feature/amazing-feature`)
+5. Open a Pull Request / 打开Pull Request
 
-### 异形拼图模式
-1. 16个不同形状的拼图块
-2. 将拼图块拖拽到中央拼图区域
-3. 右键旋转调整角度
-4. 拼图块会自动吸附到正确位置
-5. 完成所有拼图块即可获胜
-
-### 操作说明
-- **左键拖拽**：移动拼图块
-- **右键点击**：旋转拼图块 90 度
-- **参考图片**：点击"显示原图"查看完整图片
-- **重新开始**：点击"重新开始"重置游戏
-- **返回菜单**：点击"返回"回到主菜单
-
-## 🔧 开发指南
-
-### 架构设计
-项目采用 MVC 架构模式：
-
-#### 表示层 (Presentation Layer)
-- **DlgMenu**：主菜单界面
-- **play4x4**：标准拼图游戏界面
-- **IrregularPuzzle**：异形拼图游戏界面
-- **各种对话框**：登录、排行榜、设置等
-
-#### 模型层 (Model Layer)
-- **GameState**：游戏状态管理
-- **PuzzlePiece**：拼图块数据模型
-- **NetworkData**：网络数据模型
-- **LevelConfig**：难度配置
-
-#### 控制层 (Control Layer)
-- **GameController**：游戏逻辑控制
-- **NetworkController**：网络通信控制
-- **SoundController**：音效控制
-- **FileController**：文件操作控制
-
-### 核心类说明
-
-#### 主要游戏类
-- **DlgMenu**：主菜单和音乐控制
-- **play4x4**：标准拼图游戏逻辑
-- **IrregularPuzzle**：异形拼图游戏逻辑
-- **JigsawPuzzle**：拼图游戏基类
-
-#### 网络类
-- **NetworkClient**：网络客户端
-- **LoginDialog**：用户登录
-- **RankingDialog**：排行榜显示
-
-#### 辅助类
-- **LevelSelect**：难度选择
-- **CustomMode**：自定义模式
-- **help**：帮助系统
-
-### 音效系统
-使用 QMediaPlayer 和 QAudioOutput 实现 MP3 音效播放：
-- 移动音效：`move.mp3`
-- 旋转音效：`rotate.mp3`
-- 正确放置音效：`correct.mp3`
-
-### 网络协议
-使用自定义 TCP 协议：
-- 用户认证（登录/注册）
-- 排行榜同步
-- 数据包结构定义在 `protocol.h`
-
-## 🐛 常见问题
-
-### Qt Creator 运行崩溃
-确保 Qt Creator 配置使用本地构建目录：
-1. 打开项目设置
-2. 构建和运行 → 构建目录
-3. 设置为本地路径（非 iCloud 目录）
-
-### 字体相关错误
-项目已替换为系统可用字体：
-- "Microsoft YaHei" → "Arial"
-- "华文行楷" → "Arial Unicode MS"
-
-### 音效文件不支持
-确保使用 MP3 格式音效文件，项目已升级到 QMediaPlayer 以支持 MP3。
-
-### 信号连接警告
-所有音乐控制按钮的信号连接已修复，使用现代 Qt 语法。
-
-## 📞 联系方式
-
-如有问题或建议，请通过以下方式联系：
-- 1481059602@qq.com
-- 13648509682
+### Development Guidelines / 开发指南
+- Follow existing code style / 遵循现有代码风格
+- Write descriptive commit messages / 编写描述性提交消息
+- Add tests for new functionality / 为新功能添加测试
+- Update documentation / 更新文档
 
 ---
 
-## 📖 更新日志
+## 📝 License / 许可证
 
-### v1.0 (2025-09-12)
-- ✅ 完成基础拼图游戏功能
-- ✅ 添加异形拼图模式
-- ✅ 实现音效系统（MP3 支持）
-- ✅ 添加网络功能
-- ✅ 修复 Qt Creator 兼容性问题
-- ✅ 完善用户界面和交互体验
-- ✅ 添加详细的文档说明
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+本项目基于MIT许可证开源 - 详情请查看[LICENSE](LICENSE)文件。
 
 ---
 
-**感谢使用 Qt 拼图游戏！** 🎉
+## 🙏 Acknowledgments / 致谢
+
+- Qt Framework for the excellent cross-platform toolkit / Qt框架提供的优秀跨平台工具包
+- All puzzle image contributors / 所有拼图图片贡献者
+- Beta testers and community feedback / Beta测试者和社区反馈
+
+---
+
+## 📞 Contact / 联系方式
+
+- **GitHub**: [3uyuan1ee](https://github.com/3uyuan1ee)
+- **Email**: 1481059602@qq.com
+- **Issues**: [Create an issue](https://github.com/3uyuan1ee/puzzle-game/issues) / [创建问题](https://github.com/3uyuan1ee/puzzle-game/issues)
+
+---
+
+## 🚀 Roadmap / 发展路线
+
+- [ ] Mobile versions (iOS/Android) / 移动版本（iOS/Android）
+- [ ] Additional puzzle types / 更多拼图类型
+- [ ] Enhanced multiplayer features / 增强的多人游戏功能
+- [ ] Puzzle editor / 拼图编辑器
+- [ ] Achievement system / 成就系统
+- [ ] Cloud save functionality / 云存档功能
+
+---
+
+Made with ❤️ using Qt and C++ / 使用Qt和C++制作 ❤️
