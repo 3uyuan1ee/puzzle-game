@@ -1,0 +1,50 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        qt-version: ['6.6.0', '6.8.0']
+        
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: ${{ matrix.qt-version }}
+        host: ${{ matrix.os }}
+        target: desktop
+        
+    - name: Build
+      run: |
+        qmake PuzzleGame.pro
+        make
+        
+    - name: Test
+      run: |
+        if [ -f "./tests/run_tests.sh" ]; then
+          ./tests/run_tests.sh
+        fi
+      shell: bash
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cppcheck clang-format
+    - name: Run linting
+      run: |
+        cppcheck --enable=all --suppress=missingIncludeSystem src/
+        find src/ -name '*.cpp' -o -name '*.h' | xargs clang-format --dry-run --Werror

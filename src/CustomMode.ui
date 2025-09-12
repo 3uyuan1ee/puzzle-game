@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomMode</class>
+ <widget class="QDialog" name="CustomMode">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>自定义模式</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="styleSheet">
+      <string notr="true">font: 24pt &quot;Arial Unicode MS&quot;;
+color: #2E8B57;</string>
+     </property>
+     <property name="text">
+      <string>自定义拼图</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="labelPreview">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>200</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px dashed #cccccc; background-color: #f9f9f9;</string>
+       </property>
+       <property name="text">
+        <string>请上传图片</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="labelInfo">
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Arial&quot;;
+color: #333333;</string>
+         </property>
+         <property name="text">
+          <string>请上传图片并设置拼图规格</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnUploadImage">
+         <property name="styleSheet">
+          <string notr="true">font: 14pt &quot;Arial Unicode MS&quot;;
+background-color: #87CEEB;
+color: #000080;
+border: 2px solid #4682B4;
+border-radius: 8px;
+padding: 8px;</string>
+         </property>
+         <property name="text">
+          <string>上传图片</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnPresetSize">
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Arial Unicode MS&quot;;
+background-color: #DDA0DD;
+color: #4B0082;
+border: 2px solid #9370DB;
+border-radius: 8px;
+padding: 6px;</string>
+         </property>
+         <property name="text">
+          <string>预设: 3x3</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="labelRows">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;Arial Unicode MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>行数：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinRows">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;Arial&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelCols">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;Arial Unicode MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>列数：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinCols">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;Arial&quot;;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="btnBack">
+       <property name="styleSheet">
+        <string notr="true">font: 16pt &quot;Arial Unicode MS&quot;;
+background-color: #f0f0f0;
+border: 2px solid #cccccc;
+border-radius: 8px;
+padding: 8px;</string>
+       </property>
+       <property name="text">
+        <string>返回</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnStartGame">
+       <property name="styleSheet">
+        <string notr="true">font: 16pt &quot;Arial Unicode MS&quot;;
+background-color: #cccccc;
+color: #666666;
+border: 2px solid #999999;
+border-radius: 8px;
+padding: 8px;</string>
+       </property>
+       <property name="text">
+        <string>开始游戏</string>
+       </property>
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

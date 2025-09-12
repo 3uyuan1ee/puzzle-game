@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgMenu</class>
+ <widget class="QDialog" name="dlgMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>525</width>
+    <height>514</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>拼图小游戏 </string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item alignment="Qt::AlignmentFlag::AlignHCenter">
+    <widget class="QLabel" name="label">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="palette">
+      <palette>
+       <active/>
+       <inactive/>
+       <disabled/>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>50</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 50pt "Arial Unicode MS";
+</string>
+     </property>
+     <property name="text">
+      <string>拼图小游戏</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btStart">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>24</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 24pt "Arial Unicode MS";
+background-color: #90EE90;
+color: #006400;
+border: 2px solid #32CD32;
+border-radius: 8px;
+padding: 8px;</string>
+     </property>
+     <property name="text">
+      <string>快速开始</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnLevelSelect">
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>24</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 24pt "Arial Unicode MS";
+background-color: #87CEEB;
+color: #000080;
+border: 2px solid #4682B4;
+border-radius: 8px;
+padding: 8px;</string>
+     </property>
+     <property name="text">
+      <string>闯关模式</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnCustomMode">
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>24</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 24pt "Arial Unicode MS";
+background-color: #DDA0DD;
+color: #4B0082;
+border: 2px solid #9370DB;
+border-radius: 8px;
+padding: 8px;</string>
+     </property>
+     <property name="text">
+      <string>自定义模式</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnJigsawMode">
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>24</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 24pt "Arial Unicode MS";
+background-color: #FFB6C1;
+color: #8B0000;
+border: 2px solid #DC143C;
+border-radius: 8px;
+padding: 8px;</string>
+     </property>
+     <property name="text">
+      <string>异形拼图</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnRanking">
+     <property name="font">
+      <font>
+       <family>Arial Unicode MS</family>
+       <pointsize>24</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 24pt "Arial Unicode MS";
+background-color: #FFD700;
+color: #8B4513;
+border: 2px solid #FFA500;
+border-radius: 8px;
+padding: 8px;</string>
+     </property>
+     <property name="text">
+      <string>排行榜</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnExit">
+     <property name="styleSheet">
+      <string notr="true">font: 30pt "Arial Unicode MS";
+</string>
+     </property>
+     <property name="text">
+      <string>退出游戏</string>
+     </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+    </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

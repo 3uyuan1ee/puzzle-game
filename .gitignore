@@ -1,0 +1,46 @@
+# Build artifacts
+build/
+debug/
+release/
+temp/
+*.pro.user
+*.qmake.stash
+Makefile
+Makefile.*
+moc_*
+ui_*
+qrc_*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Compiled binaries
+*.exe
+*.app
+*.so
+*.dylib
+*.dll
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.cache
+
+# Test coverage
+coverage/
+htmlcov/
+
+# Dependencies
+vendor/
+node_modules/

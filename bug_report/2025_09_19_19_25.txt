@@ -1,0 +1,777 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               PuzzleGame [77312]
+Path:                  /Users/USER/Library/Mobile Documents/com~apple~CloudDocs/*/PuzzleGame.app/Contents/MacOS/PuzzleGame
+Identifier:            com.yourcompany.PuzzleGame
+Version:               ???
+Code Type:             ARM-64 (Native)
+Parent Process:        Qt Creator [70639]
+User ID:               501
+
+Date/Time:             2025-09-10 19:25:28.2394 +0800
+OS Version:            macOS 15.6.1 (24G90)
+Report Version:        12
+Anonymous UUID:        FBA9AF80-8A7F-F8F4-2743-5BC3AC483992
+
+Sleep/Wake UUID:       F10086CC-F2E3-416C-98B4-20C3AE6653C7
+
+Time Awake Since Boot: 100000 seconds
+Time Since Wake:       6169 seconds
+
+System Integrity Protection: enabled
+
+Crashed Thread:        0  Dispatch queue: com.apple.main-thread
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       KERN_INVALID_ADDRESS at 0x0000000000000000
+Exception Codes:       0x0000000000000001, 0x0000000000000000
+
+Termination Reason:    Namespace SIGNAL, Code 11 Segmentation fault: 11
+Terminating Process:   exc handler [77312]
+
+VM Region Info: 0 is not in any region.  Bytes before following region: 4299735040
+      REGION TYPE                    START - END         [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL
+      UNUSED SPACE AT START
+--->  
+      __TEXT                      10048c000-100680000    [ 2000K] r-x/r-x SM=COW  /Users/USER/Library/Mobile Documents/com~apple~CloudDocs/*/PuzzleGame.app/Contents/MacOS/PuzzleGame
+
+Thread 0 Crashed::  Dispatch queue: com.apple.main-thread
+0   QtCore                        	       0x1025e3888 QObject::disconnect(QObject const*, char const*, QObject const*, char const*) + 360
+1   PuzzleGame                    	       0x100498eac QObject::disconnect(char const*, QObject const*, char const*) const + 48 (qobject.h:292)
+2   PuzzleGame                    	       0x100497854 DlgMenu::on_btStart_clicked() + 128 (DlgMenu.cpp:197)
+3   PuzzleGame                    	       0x1004c0c8c DlgMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) + 120 (moc_DlgMenu.cpp:101)
+4   PuzzleGame                    	       0x1004c0fb8 DlgMenu::qt_metacall(QMetaObject::Call, int, void**) + 148 (moc_DlgMenu.cpp:145)
+5   QtCore                        	       0x1025e6288 void doActivate<false>(QObject*, int, void**) + 1172
+6   QtWidgets                     	       0x101151f8c QAbstractButtonPrivate::emitClicked() + 112
+7   QtWidgets                     	       0x101151e04 QAbstractButtonPrivate::click() + 244
+8   QtWidgets                     	       0x101152b94 QAbstractButton::mouseReleaseEvent(QMouseEvent*) + 188
+9   QtWidgets                     	       0x1010bcd58 QWidget::event(QEvent*) + 2876
+10  QtWidgets                     	       0x10107c094 QApplicationPrivate::notify_helper(QObject*, QEvent*) + 248
+11  QtWidgets                     	       0x10107e144 QApplication::notify(QObject*, QEvent*) + 4948
+12  QtCore                        	       0x1025a95c4 QCoreApplication::notifyInternal2(QObject*, QEvent*) + 168
+13  QtWidgets                     	       0x10107c6c8 QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) + 956
+14  QtWidgets                     	       0x1010cff2c QWidgetWindow::handleMouseEvent(QMouseEvent*) + 1256
+15  QtWidgets                     	       0x1010cf1d0 QWidgetWindow::event(QEvent*) + 180
+16  QtWidgets                     	       0x10107c094 QApplicationPrivate::notify_helper(QObject*, QEvent*) + 248
+17  QtWidgets                     	       0x10107d01c QApplication::notify(QObject*, QEvent*) + 556
+18  QtCore                        	       0x1025a95c4 QCoreApplication::notifyInternal2(QObject*, QEvent*) + 168
+19  QtGui                         	       0x101e7ae74 QGuiApplicationPrivate::processMouseEvent(QWindowSystemInterfacePrivate::MouseEvent*) + 1572
+20  QtGui                         	       0x101ecc578 QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) + 132
+21  libqcocoa.dylib               	       0x102f5482c QCocoaEventDispatcherPrivate::postedEventsSourceCallback(void*) + 428
+22  CoreFoundation                	       0x1992eab14 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28
+23  CoreFoundation                	       0x1992eaaa8 __CFRunLoopDoSource0 + 172
+24  CoreFoundation                	       0x1992ea814 __CFRunLoopDoSources0 + 232
+25  CoreFoundation                	       0x1992e9468 __CFRunLoopRun + 840
+26  CoreFoundation                	       0x1992e8a98 CFRunLoopRunSpecific + 572
+27  HIToolbox                     	       0x1a4d8b27c RunCurrentEventLoopInMode + 324
+28  HIToolbox                     	       0x1a4d8e31c ReceiveNextEventCommon + 216
+29  HIToolbox                     	       0x1a4f19484 _BlockUntilNextEventMatchingListInModeWithFilter + 76
+30  AppKit                        	       0x19d20da34 _DPSNextEvent + 684
+31  AppKit                        	       0x19dbac940 -[NSApplication(NSEventRouting) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 688
+32  AppKit                        	       0x19d200be4 -[NSApplication run] + 480
+33  libqcocoa.dylib               	       0x102f529d8 QCocoaEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) + 1980
+34  QtCore                        	       0x1025b0b2c QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) + 496
+35  QtCore                        	       0x1025a9bf8 QCoreApplication::exec() + 220
+36  PuzzleGame                    	       0x10049604c main + 88 (main.cpp:12)
+37  dyld                          	       0x198e5eb98 start + 6076
+
+Thread 1:
+0   libsystem_pthread.dylib       	       0x1991fab6c start_wqthread + 0
+
+Thread 2:
+0   libsystem_pthread.dylib       	       0x1991fab6c start_wqthread + 0
+
+Thread 3:
+0   libsystem_pthread.dylib       	       0x1991fab6c start_wqthread + 0
+
+Thread 4:
+0   libsystem_pthread.dylib       	       0x1991fab6c start_wqthread + 0
+
+Thread 5:: com.apple.NSEventThread
+0   libsystem_kernel.dylib        	       0x1991bdc34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1991d03a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1991c6764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1991bdfa8 mach_msg + 24
+4   CoreFoundation                	       0x1992eacbc __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x1992e95d8 __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x1992e8a98 CFRunLoopRunSpecific + 572
+7   AppKit                        	       0x19d33178c _NSEventThread + 140
+8   libsystem_pthread.dylib       	       0x1991ffc0c _pthread_start + 136
+9   libsystem_pthread.dylib       	       0x1991fab80 thread_start + 8
+
+Thread 6:
+0   libsystem_pthread.dylib       	       0x1991fab6c start_wqthread + 0
+
+Thread 7:: Thread (pooled)
+0   libsystem_kernel.dylib        	       0x1991c13cc __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x1992000e0 _pthread_cond_wait + 984
+2   QtCore                        	       0x1026e8594 QWaitConditionPrivate::wait_relative(QDeadlineTimer) + 180
+3   QtCore                        	       0x1026e8254 QWaitConditionPrivate::wait(QDeadlineTimer) + 84
+4   QtCore                        	       0x1026e8198 QWaitCondition::wait(QMutex*, QDeadlineTimer) + 108
+5   QtCore                        	       0x1026e3ee8 QThreadPoolThread::run() + 600
+6   QtCore                        	       0x1026de27c QThreadPrivate::start(void*) + 308
+7   libsystem_pthread.dylib       	       0x1991ffc0c _pthread_start + 136
+8   libsystem_pthread.dylib       	       0x1991fab80 thread_start + 8
+
+Thread 8:: Thread (pooled)
+0   libsystem_kernel.dylib        	       0x1991c13cc __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x1992000e0 _pthread_cond_wait + 984
+2   QtCore                        	       0x1026e8594 QWaitConditionPrivate::wait_relative(QDeadlineTimer) + 180
+3   QtCore                        	       0x1026e8254 QWaitConditionPrivate::wait(QDeadlineTimer) + 84
+4   QtCore                        	       0x1026e8198 QWaitCondition::wait(QMutex*, QDeadlineTimer) + 108
+5   QtCore                        	       0x1026e3ee8 QThreadPoolThread::run() + 600
+6   QtCore                        	       0x1026de27c QThreadPrivate::start(void*) + 308
+7   libsystem_pthread.dylib       	       0x1991ffc0c _pthread_start + 136
+8   libsystem_pthread.dylib       	       0x1991fab80 thread_start + 8
+
+Thread 9:: Thread (pooled)
+0   libsystem_kernel.dylib        	       0x1991c13cc __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x1992000e0 _pthread_cond_wait + 984
+2   QtCore                        	       0x1026e8594 QWaitConditionPrivate::wait_relative(QDeadlineTimer) + 180
+3   QtCore                        	       0x1026e8254 QWaitConditionPrivate::wait(QDeadlineTimer) + 84
+4   QtCore                        	       0x1026e8198 QWaitCondition::wait(QMutex*, QDeadlineTimer) + 108
+5   QtCore                        	       0x1026e3ee8 QThreadPoolThread::run() + 600
+6   QtCore                        	       0x1026de27c QThreadPrivate::start(void*) + 308
+7   libsystem_pthread.dylib       	       0x1991ffc0c _pthread_start + 136
+8   libsystem_pthread.dylib       	       0x1991fab80 thread_start + 8
+
+Thread 10:: Thread (pooled)
+0   libsystem_kernel.dylib        	       0x1991c13cc __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x1992000e0 _pthread_cond_wait + 984
+2   QtCore                        	       0x1026e8594 QWaitConditionPrivate::wait_relative(QDeadlineTimer) + 180
+3   QtCore                        	       0x1026e8254 QWaitConditionPrivate::wait(QDeadlineTimer) + 84
+4   QtCore                        	       0x1026e8198 QWaitCondition::wait(QMutex*, QDeadlineTimer) + 108
+5   QtCore                        	       0x1026e3ee8 QThreadPoolThread::run() + 600
+6   QtCore                        	       0x1026de27c QThreadPrivate::start(void*) + 308
+7   libsystem_pthread.dylib       	       0x1991ffc0c _pthread_start + 136
+8   libsystem_pthread.dylib       	       0x1991fab80 thread_start + 8
+
+
+Thread 0 crashed with ARM Thread State (64-bit):
+    x0: 0x00000001438482c0   x1: 0x0000000000000000   x2: 0x0000000000000000   x3: 0x0000000000000000
+    x4: 0x0000000000000000   x5: 0x00000000ec267033   x6: 0x0000600002d8cc80   x7: 0x0000000000000001
+    x8: 0x0000000000000000   x9: 0x000000006f970000  x10: 0x0000000100495020  x11: 0x0000000000000003
+   x12: 0x0f00ffffffffffff  x13: 0x000100014270b7a0  x14: 0x0000000000000010  x15: 0x00000000ec466830
+   x16: 0x00000001025e3720  x17: 0x0000000000000033  x18: 0x0000000000000000  x19: 0x00000001027cb368
+   x20: 0x00006000036a3120  x21: 0x00000001438482c0  x22: 0x0000000000000000  x23: 0x0000000000000000
+   x24: 0x0000000000000000  x25: 0x0000000000000000  x26: 0x0000000000000000  x27: 0x0000000000000000
+   x28: 0x00000002071920c0   fp: 0x000000016f970d20   lr: 0x0000000100498eac
+    sp: 0x000000016f970960   pc: 0x00000001025e3888 cpsr: 0x20001000
+   far: 0x0000000000000000  esr: 0x92000006 (Data Abort) byte read Translation fault
+
+Binary Images:
+       0x10048c000 -        0x10067ffff com.yourcompany.PuzzleGame (*) <57367477-4a02-3379-98d6-a9aa58ce66cf> /Users/USER/Library/Mobile Documents/com~apple~CloudDocs/*/PuzzleGame.app/Contents/MacOS/PuzzleGame
+       0x101070000 -        0x101447fff org.qt-project.QtWidgets (6.9) <9f70323a-df5f-3c2f-8e0b-5886513a6d99> /opt/homebrew/*/QtWidgets.framework/Versions/A/QtWidgets
+       0x101e08000 -        0x10223ffff org.qt-project.QtGui (6.9) <cda6be5d-710e-3861-8eb0-7676ea9e2950> /opt/homebrew/*/QtGui.framework/Versions/A/QtGui
+       0x1009f0000 -        0x100b03fff org.qt-project.QtNetwork (6.9) <f6a1858f-aee7-34ed-867f-b04c65f29177> /opt/homebrew/*/QtNetwork.framework/Versions/A/QtNetwork
+       0x102524000 -        0x1028dffff org.qt-project.QtCore (6.9) <19b92468-8f1e-3883-a8ca-639618760c43> /opt/homebrew/*/QtCore.framework/Versions/A/QtCore
+       0x10073c000 -        0x10075bfff liblzma.5.dylib (*) <6b34bd7f-9320-3883-9a5d-e8542c9b17ca> /opt/homebrew/*/liblzma.5.dylib
+       0x1007a0000 -        0x1007c3fff libpng16.16.dylib (*) <f279e392-5936-3ad4-a017-e5eb186625e8> /opt/homebrew/*/libpng16.16.dylib
+       0x100858000 -        0x1008bbfff libtiff.6.dylib (*) <b82d8039-c589-3775-a450-26790d5b7f6b> /opt/homebrew/*/libtiff.6.dylib
+       0x100720000 -        0x100727fff libgif.7.2.0.dylib (*) <b3fe47f3-406c-3916-bdd0-cf7f7ae8d9fa> /opt/homebrew/*/libgif.7.2.0.dylib
+       0x1008dc000 -        0x100937fff libjpeg.8.3.2.dylib (*) <905d524c-0642-3b18-95ed-cd3a79553001> /opt/homebrew/*/libjpeg.8.3.2.dylib
+       0x100c94000 -        0x100d1ffff libzstd.1.5.7.dylib (*) <afd03688-5fac-3b3d-96aa-9d88c034ff23> /opt/homebrew/*/libzstd.1.5.7.dylib
+       0x100e8c000 -        0x100f87fff libglib-2.0.0.dylib (*) <b687969a-6a97-398a-af7b-2eb843dc12fe> /opt/homebrew/*/libglib-2.0.0.dylib
+       0x1016f4000 -        0x101763fff org.qt-project.QtDBus (6.9) <6710bb87-51a4-3719-ad70-af3c931fd32e> /opt/homebrew/*/QtDBus.framework/Versions/A/QtDBus
+       0x1017e8000 -        0x1018a7fff libharfbuzz.0.dylib (*) <3d359291-b602-39fc-8112-8876e0ebaec3> /opt/homebrew/*/libharfbuzz.0.dylib
+       0x10080c000 -        0x100817fff libmd4c.0.5.2.dylib (*) <bbb78130-97b1-3019-9bb2-db21119d3562> /opt/homebrew/*/libmd4c.0.5.2.dylib
+       0x100d3c000 -        0x100db7fff libfreetype.6.dylib (*) <cfd169d0-526f-3a45-b5db-836906fec3d7> /opt/homebrew/*/libfreetype.6.dylib
+       0x10078c000 -        0x10078ffff libgthread-2.0.0.dylib (*) <93f52c60-48bd-36b2-a68c-8e2861b94d50> /opt/homebrew/*/libgthread-2.0.0.dylib
+       0x100bf0000 -        0x100c17fff libintl.8.dylib (*) <f9485a9d-d20a-3fc3-b68f-9ebd5a52cac9> /opt/homebrew/*/libintl.8.dylib
+       0x100fdc000 -        0x101057fff libpcre2-8.0.dylib (*) <a9da24ef-74d4-397b-ab16-1d18e55a653b> /opt/homebrew/*/libpcre2-8.0.dylib
+       0x100ddc000 -        0x100e0bfff libdbus-1.3.dylib (*) <5a4bc5e5-db6a-3868-bb6b-ad48a19ac041> /opt/homebrew/*/libdbus-1.3.dylib
+       0x102b18000 -        0x102ccbfff libicui18n.77.1.dylib (*) <6c0f5599-2c90-33c5-8a77-33c654b11c06> /opt/homebrew/*/libicui18n.77.1.dylib
+       0x101ae4000 -        0x101c1bfff libicuuc.77.1.dylib (*) <c48fd9eb-06bb-3a7b-b4c7-a6e7da9f8b92> /opt/homebrew/*/libicuuc.77.1.dylib
+       0x104cd0000 -        0x106b3bfff libicudata.77.1.dylib (*) <e996519b-b7ad-3d2c-94e9-1ca42fc9cfb0> /opt/homebrew/*/libicudata.77.1.dylib
+       0x100824000 -        0x10082ffff libdouble-conversion.3.3.0.dylib (*) <99e1194f-a3c6-30df-a9a2-5183f8ea3775> /opt/homebrew/*/libdouble-conversion.3.3.0.dylib
+       0x100840000 -        0x100847fff libb2.1.dylib (*) <c4431360-2960-3e50-b699-3691771ade27> /opt/homebrew/*/libb2.1.dylib
+       0x1019a8000 -        0x101a1bfff libpcre2-16.0.dylib (*) <2a50e5d5-125d-3ec1-9a8b-5db3f4595315> /opt/homebrew/*/libpcre2-16.0.dylib
+       0x100c2c000 -        0x100c3ffff libgraphite2.3.2.1.dylib (*) <d07b94fc-f322-3e73-a5e0-727b6e8e8c90> /opt/homebrew/*/libgraphite2.3.2.1.dylib
+       0x100950000 -        0x10095bfff libbrotlidec.1.1.0.dylib (*) <8603b5fd-8c9a-3c86-baaa-d09531b0e8e3> /opt/homebrew/*/libbrotlidec.1.1.0.dylib
+       0x100e2c000 -        0x100e4bfff libbrotlicommon.1.1.0.dylib (*) <3392de09-c979-339a-9bdb-88de244baa5e> /opt/homebrew/*/libbrotlicommon.1.1.0.dylib
+       0x101a30000 -        0x101a4ffff com.apple.security.csparser (3.0) <3a905673-ada9-3c57-992e-b83f555baa61> /System/Library/Frameworks/Security.framework/Versions/A/PlugIns/csparser.bundle/Contents/MacOS/csparser
+       0x102f3c000 -        0x102fd7fff libqcocoa.dylib (*) <d10caf6a-65b9-3f6e-bef5-4e1eec1ba86d> /opt/homebrew/*/libqcocoa.dylib
+       0x102f0c000 -        0x102f17fff libobjc-trampolines.dylib (*) <a3faee04-0f8b-3428-9497-560c97eca6fb> /usr/lib/libobjc-trampolines.dylib
+       0x1128a0000 -        0x1128c3fff libqmacstyle.dylib (*) <08070ab2-cc6d-3e6d-be57-a2fedb0800cd> /opt/homebrew/*/libqmacstyle.dylib
+       0x113c64000 -        0x114397fff com.apple.AGXMetalG15G-C0 (329.2) <5573a5a4-b145-30f4-b98f-6c84b8245c26> /System/Library/Extensions/AGXMetalG15G_C0.bundle/Contents/MacOS/AGXMetalG15G_C0
+       0x11d390000 -        0x11d39bfff libqjpeg.dylib (*) <e13d87ca-c0e8-30f9-a0f2-761201ca2612> /opt/homebrew/*/libqjpeg.dylib
+       0x19926e000 -        0x1997acfff com.apple.CoreFoundation (6.9) <8d45baee-6cc0-3b89-93fd-ea1c8e15c6d7> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+       0x1a4cc8000 -        0x1a4fcefdf com.apple.HIToolbox (2.1.1) <1a037942-11e0-3fc8-aad2-20b11e7ae1a4> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+       0x19d1d3000 -        0x19e663e3f com.apple.AppKit (6.9) <860c164c-d04c-30ff-8c6f-e672b74caf11> /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+       0x198e58000 -        0x198ef3577 dyld (*) <3247e185-ced2-36ff-9e29-47a77c23e004> /usr/lib/dyld
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???
+       0x1991f9000 -        0x199205a47 libsystem_pthread.dylib (*) <d6494ba9-171e-39fc-b1aa-28ecf87975d1> /usr/lib/system/libsystem_pthread.dylib
+       0x1991bd000 -        0x1991f8653 libsystem_kernel.dylib (*) <6e4a96ad-04b8-3e8a-b91d-087e62306246> /usr/lib/system/libsystem_kernel.dylib
+       0x1ffd15000 -        0x2008d719f com.apple.SwiftUICore (6.5.4) <84fe33b3-a5db-3ca3-90cc-4d258172e788> /System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=1.7G resident=0K(0%) swapped_out_or_unallocated=1.7G(100%)
+Writable regions: Total=1.6G written=819K(0%) resident=819K(0%) swapped_out=0K(0%) unallocated=1.6G(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Accelerate framework               128K        1 
+Activity Tracing                   256K        1 
+CG image                            96K        6 
+ColorSync                          544K       28 
+CoreAnimation                      288K       18 
+CoreGraphics                        48K        2 
+CoreUI image data                 1488K       11 
+Foundation                          16K        1 
+Kernel Alloc Once                   32K        1 
+MALLOC                             1.6G       58 
+MALLOC guard page                  288K       18 
+STACK GUARD                       56.2M       11 
+Stack                             13.3M       12 
+VM_ALLOCATE                        112K        7 
+__AUTH                            5362K      680 
+__AUTH_CONST                      75.6M      917 
+__CTF                               824        1 
+__DATA                            25.4M      925 
+__DATA_CONST                      27.7M      958 
+__DATA_DIRTY                      2762K      335 
+__FONT_DATA                        2352        1 
+__INFO_FILTER                         8        1 
+__LINKEDIT                       631.7M       36 
+__OBJC_RO                         61.4M        1 
+__OBJC_RW                         2396K        1 
+__TEXT                             1.1G      978 
+__TEXT (graphics)                 8000K        2 
+__TPRO_CONST                       128K        2 
+dyld private memory                768K        6 
+mapped file                      548.0M       63 
+page table in kernel               819K        1 
+shared memory                     1424K       17 
+===========                     =======  ======= 
+TOTAL                              4.1G     5100 
+
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"PuzzleGame","timestamp":"2025-09-10 19:25:28.00 +0800","app_version":"","slice_uuid":"57367477-4a02-3379-98d6-a9aa58ce66cf","build_version":"","platform":1,"bundleID":"com.yourcompany.PuzzleGame","share_with_app_devs":0,"is_first_party":0,"bug_type":"309","os_version":"macOS 15.6.1 (24G90)","roots_installed":0,"name":"PuzzleGame","incident_id":"612A52CF-78D3-465A-9B97-5B52E19E92AC"}
+{
+  "uptime" : 100000,
+  "procRole" : "Foreground",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "Mac15,12",
+  "coalitionID" : 601,
+  "osVersion" : {
+    "train" : "macOS 15.6.1",
+    "build" : "24G90",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2025-09-10 19:25:28.2394 +0800",
+  "codeSigningMonitor" : 1,
+  "incident" : "612A52CF-78D3-465A-9B97-5B52E19E92AC",
+  "pid" : 77312,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2025-09-10 19:25:24.7077 +0800",
+  "procStartAbsTime" : 2621370432936,
+  "procExitAbsTime" : 2621454768447,
+  "procName" : "PuzzleGame",
+  "procPath" : "\/Users\/USER\/Library\/Mobile Documents\/com~apple~CloudDocs\/*\/PuzzleGame.app\/Contents\/MacOS\/PuzzleGame",
+  "bundleInfo" : {"CFBundleIdentifier":"com.yourcompany.PuzzleGame"},
+  "storeInfo" : {"deviceIdentifierForVendor":"61FEA222-773B-52C2-8708-0667459C3781","thirdParty":true},
+  "parentProc" : "Qt Creator",
+  "parentPid" : 70639,
+  "coalitionName" : "org.qt-project.qtcreator",
+  "crashReporterKey" : "FBA9AF80-8A7F-F8F4-2743-5BC3AC483992",
+  "lowPowerMode" : 1,
+  "appleIntelligenceStatus" : {"reasons":["regionIneligible","countryBillingIneligible","selectedLanguageDoesNotMatchSelectedSiriLanguage","countryLocationIneligible"],"state":"unavailable"},
+  "codeSigningID" : "PuzzleGame",
+  "codeSigningTeamID" : "",
+  "codeSigningFlags" : 570556929,
+  "codeSigningValidationCategory" : 10,
+  "codeSigningTrustLevel" : 4294967295,
+  "codeSigningAuxiliaryInfo" : 0,
+  "instructionByteStream" : {"beforePC":"ABsANogGAJHoHwD5BAAAFBMAgFIGAQAU\/38DqejzAbLoTwD5qAJA+Q==","atPC":"CAFA+eADFaoAAT\/W6AMIkf8DCan\/fwip6QMIkTNhAJFA5QVPYAIJrQ=="},
+  "bootSessionUUID" : "D3843D3E-29D5-4859-838A-486E16F98368",
+  "wakeTime" : 6169,
+  "sleepWakeUUID" : "F10086CC-F2E3-416C-98B4-20C3AE6653C7",
+  "sip" : "enabled",
+  "vmRegionInfo" : "0 is not in any region.  Bytes before following region: 4299735040\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      10048c000-100680000    [ 2000K] r-x\/r-x SM=COW  \/Users\/USER\/Library\/Mobile Documents\/com~apple~CloudDocs\/*\/PuzzleGame.app\/Contents\/MacOS\/PuzzleGame",
+  "exception" : {"codes":"0x0000000000000001, 0x0000000000000000","rawCodes":[1,0],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x0000000000000000"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":77312},
+  "vmregioninfo" : "0 is not in any region.  Bytes before following region: 4299735040\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      10048c000-100680000    [ 2000K] r-x\/r-x SM=COW  \/Users\/USER\/Library\/Mobile Documents\/com~apple~CloudDocs\/*\/PuzzleGame.app\/Contents\/MacOS\/PuzzleGame",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"triggered":true,"id":4905157,"threadState":{"x":[{"value":5427724992},{"value":0},{"value":0},{"value":0},{"value":0},{"value":3961942067},{"value":105553164029056},{"value":1},{"value":0},{"value":1872166912},{"value":4299771936},{"value":3},{"value":1081145385545629695},{"value":281480386361248},{"value":16},{"value":3964037168},{"value":4334696224,"symbolLocation":0,"symbol":"QObject::disconnect(QObject const*, char const*, QObject const*, char const*)"},{"value":51},{"value":0},{"value":4336694120,"symbolLocation":0,"symbol":"QByteArray::_empty"},{"value":105553173557536},{"value":5427724992},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":8709021888,"symbolLocation":0,"symbol":"_main_thread"}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4299787948},"cpsr":{"value":536875008},"fp":{"value":6167137568},"sp":{"value":6167136608},"esr":{"value":2449473542,"description":"(Data Abort) byte read Translation fault"},"pc":{"value":4334696584,"matchesCrashFrame":1},"far":{"value":0}},"queue":"com.apple.main-thread","frames":[{"imageOffset":784520,"symbol":"QObject::disconnect(QObject const*, char const*, QObject const*, char const*)","symbolLocation":360,"imageIndex":4},{"imageOffset":52908,"sourceLine":292,"sourceFile":"qobject.h","symbol":"QObject::disconnect(char const*, QObject const*, char const*) const","imageIndex":0,"symbolLocation":48},{"imageOffset":47188,"sourceLine":197,"sourceFile":"DlgMenu.cpp","symbol":"DlgMenu::on_btStart_clicked()","imageIndex":0,"symbolLocation":128},{"imageOffset":216204,"sourceLine":101,"sourceFile":"moc_DlgMenu.cpp","symbol":"DlgMenu::qt_static_metacall(QObject*, QMetaObject::Call, int, void**)","imageIndex":0,"symbolLocation":120},{"imageOffset":217016,"sourceLine":145,"sourceFile":"moc_DlgMenu.cpp","symbol":"DlgMenu::qt_metacall(QMetaObject::Call, int, void**)","imageIndex":0,"symbolLocation":148},{"imageOffset":795272,"symbol":"void doActivate<false>(QObject*, int, void**)","symbolLocation":1172,"imageIndex":4},{"imageOffset":925580,"symbol":"QAbstractButtonPrivate::emitClicked()","symbolLocation":112,"imageIndex":1},{"imageOffset":925188,"symbol":"QAbstractButtonPrivate::click()","symbolLocation":244,"imageIndex":1},{"imageOffset":928660,"symbol":"QAbstractButton::mouseReleaseEvent(QMouseEvent*)","symbolLocation":188,"imageIndex":1},{"imageOffset":314712,"symbol":"QWidget::event(QEvent*)","symbolLocation":2876,"imageIndex":1},{"imageOffset":49300,"symbol":"QApplicationPrivate::notify_helper(QObject*, QEvent*)","symbolLocation":248,"imageIndex":1},{"imageOffset":57668,"symbol":"QApplication::notify(QObject*, QEvent*)","symbolLocation":4948,"imageIndex":1},{"imageOffset":546244,"symbol":"QCoreApplication::notifyInternal2(QObject*, QEvent*)","symbolLocation":168,"imageIndex":4},{"imageOffset":50888,"symbol":"QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool)","symbolLocation":956,"imageIndex":1},{"imageOffset":393004,"symbol":"QWidgetWindow::handleMouseEvent(QMouseEvent*)","symbolLocation":1256,"imageIndex":1},{"imageOffset":389584,"symbol":"QWidgetWindow::event(QEvent*)","symbolLocation":180,"imageIndex":1},{"imageOffset":49300,"symbol":"QApplicationPrivate::notify_helper(QObject*, QEvent*)","symbolLocation":248,"imageIndex":1},{"imageOffset":53276,"symbol":"QApplication::notify(QObject*, QEvent*)","symbolLocation":556,"imageIndex":1},{"imageOffset":546244,"symbol":"QCoreApplication::notifyInternal2(QObject*, QEvent*)","symbolLocation":168,"imageIndex":4},{"imageOffset":470644,"symbol":"QGuiApplicationPrivate::processMouseEvent(QWindowSystemInterfacePrivate::MouseEvent*)","symbolLocation":1572,"imageIndex":2},{"imageOffset":804216,"symbol":"QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>)","symbolLocation":132,"imageIndex":2},{"imageOffset":100396,"symbol":"QCocoaEventDispatcherPrivate::postedEventsSourceCallback(void*)","symbolLocation":428,"imageIndex":30},{"imageOffset":510740,"symbol":"__CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__","symbolLocation":28,"imageIndex":35},{"imageOffset":510632,"symbol":"__CFRunLoopDoSource0","symbolLocation":172,"imageIndex":35},{"imageOffset":509972,"symbol":"__CFRunLoopDoSources0","symbolLocation":232,"imageIndex":35},{"imageOffset":504936,"symbol":"__CFRunLoopRun","symbolLocation":840,"imageIndex":35},{"imageOffset":502424,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":35},{"imageOffset":799356,"symbol":"RunCurrentEventLoopInMode","symbolLocation":324,"imageIndex":36},{"imageOffset":811804,"symbol":"ReceiveNextEventCommon","symbolLocation":216,"imageIndex":36},{"imageOffset":2430084,"symbol":"_BlockUntilNextEventMatchingListInModeWithFilter","symbolLocation":76,"imageIndex":36},{"imageOffset":240180,"symbol":"_DPSNextEvent","symbolLocation":684,"imageIndex":37},{"imageOffset":10328384,"symbol":"-[NSApplication(NSEventRouting) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]","symbolLocation":688,"imageIndex":37},{"imageOffset":187364,"symbol":"-[NSApplication run]","symbolLocation":480,"imageIndex":37},{"imageOffset":92632,"symbol":"QCocoaEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>)","symbolLocation":1980,"imageIndex":30},{"imageOffset":576300,"symbol":"QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>)","symbolLocation":496,"imageIndex":4},{"imageOffset":547832,"symbol":"QCoreApplication::exec()","symbolLocation":220,"imageIndex":4},{"imageOffset":41036,"sourceLine":12,"sourceFile":"main.cpp","symbol":"main","imageIndex":0,"symbolLocation":88},{"imageOffset":27544,"symbol":"start","symbolLocation":6076,"imageIndex":38}]},{"id":4905159,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":40}],"threadState":{"x":[{"value":6168276992},{"value":3587},{"value":6167740416},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6168276992},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6863956844},"far":{"value":0}}},{"id":4905160,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":40}],"threadState":{"x":[{"value":6168850432},{"value":10499},{"value":6168313856},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6168850432},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6863956844},"far":{"value":0}}},{"id":4905161,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":40}],"threadState":{"x":[{"value":6169423872},{"value":25859},{"value":6168887296},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6169423872},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6863956844},"far":{"value":0}}},{"id":4905162,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":40}],"threadState":{"x":[{"value":6169997312},{"value":33543},{"value":6169460736},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6169997312},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6863956844},"far":{"value":0}}},{"id":4905169,"name":"com.apple.NSEventThread","threadState":{"x":[{"value":268451845},{"value":21592279046},{"value":8589934592,"symbolLocation":168,"symbol":"UnitCurveAnimation.velocity<A>(value:time:context:)"},{"value":170437187207168},{"value":0},{"value":170437187207168},{"value":2},{"value":4294967295},{"value":0},{"value":17179869184},{"value":0},{"value":2},{"value":0},{"value":0},{"value":39683},{"value":0},{"value":18446744073709551569},{"value":8726158440},{"value":0},{"value":4294967295},{"value":2},{"value":170437187207168},{"value":0},{"value":170437187207168},{"value":6170566792},{"value":8589934592,"symbolLocation":168,"symbol":"UnitCurveAnimation.velocity<A>(value:time:context:)"},{"value":21592279046},{"value":18446744073709550527},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6863782816},"cpsr":{"value":4096},"fp":{"value":6170566640},"sp":{"value":6170566560},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6863707188},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":41},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":41},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":41},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":41},{"imageOffset":511164,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":35},{"imageOffset":505304,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":35},{"imageOffset":502424,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":35},{"imageOffset":1435532,"symbol":"_NSEventThread","symbolLocation":140,"imageIndex":37},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":40},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":40}]},{"id":4905191,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":40}],"threadState":{"x":[{"value":6171144192},{"value":0},{"value":6170607616},{"value":0},{"value":278532},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6171144192},"esr":{"value":0,"description":" Address size fault"},"pc":{"value":6863956844},"far":{"value":0}}},{"id":4905192,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":29},{"value":999999000},{"value":6171716968},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8726156560},{"value":0},{"value":105553140373632},{"value":105553140373696},{"value":6171717856},{"value":999999000},{"value":29},{"value":0},{"value":1},{"value":256},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6863978720},"cpsr":{"value":1610616832},"fp":{"value":6171717088},"sp":{"value":6171716944},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6863721420},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":41},{"imageOffset":28896,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":40},{"imageOffset":1852820,"symbol":"QWaitConditionPrivate::wait_relative(QDeadlineTimer)","symbolLocation":180,"imageIndex":4},{"imageOffset":1851988,"symbol":"QWaitConditionPrivate::wait(QDeadlineTimer)","symbolLocation":84,"imageIndex":4},{"imageOffset":1851800,"symbol":"QWaitCondition::wait(QMutex*, QDeadlineTimer)","symbolLocation":108,"imageIndex":4},{"imageOffset":1834728,"symbol":"QThreadPoolThread::run()","symbolLocation":600,"imageIndex":4},{"imageOffset":1811068,"symbol":"QThreadPrivate::start(void*)","symbolLocation":308,"imageIndex":4},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":40},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":40}]},{"id":4905193,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":256},{"value":0},{"value":0},{"value":160},{"value":29},{"value":999999000},{"value":6172290408},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8726156560},{"value":0},{"value":105553140374016},{"value":105553140374080},{"value":6172291296},{"value":999999000},{"value":29},{"value":256},{"value":257},{"value":512},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6863978720},"cpsr":{"value":1610616832},"fp":{"value":6172290528},"sp":{"value":6172290384},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6863721420},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":41},{"imageOffset":28896,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":40},{"imageOffset":1852820,"symbol":"QWaitConditionPrivate::wait_relative(QDeadlineTimer)","symbolLocation":180,"imageIndex":4},{"imageOffset":1851988,"symbol":"QWaitConditionPrivate::wait(QDeadlineTimer)","symbolLocation":84,"imageIndex":4},{"imageOffset":1851800,"symbol":"QWaitCondition::wait(QMutex*, QDeadlineTimer)","symbolLocation":108,"imageIndex":4},{"imageOffset":1834728,"symbol":"QThreadPoolThread::run()","symbolLocation":600,"imageIndex":4},{"imageOffset":1811068,"symbol":"QThreadPrivate::start(void*)","symbolLocation":308,"imageIndex":4},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":40},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":40}]},{"id":4905194,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":256},{"value":0},{"value":0},{"value":160},{"value":29},{"value":999999000},{"value":6172863848},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8726156560},{"value":0},{"value":105553140374400},{"value":105553140374464},{"value":6172864736},{"value":999999000},{"value":29},{"value":256},{"value":257},{"value":512},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6863978720},"cpsr":{"value":1610616832},"fp":{"value":6172863968},"sp":{"value":6172863824},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6863721420},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":41},{"imageOffset":28896,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":40},{"imageOffset":1852820,"symbol":"QWaitConditionPrivate::wait_relative(QDeadlineTimer)","symbolLocation":180,"imageIndex":4},{"imageOffset":1851988,"symbol":"QWaitConditionPrivate::wait(QDeadlineTimer)","symbolLocation":84,"imageIndex":4},{"imageOffset":1851800,"symbol":"QWaitCondition::wait(QMutex*, QDeadlineTimer)","symbolLocation":108,"imageIndex":4},{"imageOffset":1834728,"symbol":"QThreadPoolThread::run()","symbolLocation":600,"imageIndex":4},{"imageOffset":1811068,"symbol":"QThreadPrivate::start(void*)","symbolLocation":308,"imageIndex":4},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":40},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":40}]},{"id":4905195,"name":"Thread (pooled)","threadState":{"x":[{"value":260},{"value":0},{"value":0},{"value":0},{"value":0},{"value":160},{"value":29},{"value":999999000},{"value":6173437288},{"value":0},{"value":0},{"value":2},{"value":2},{"value":0},{"value":0},{"value":0},{"value":305},{"value":8726156560},{"value":0},{"value":105553140374784},{"value":105553140374848},{"value":6173438176},{"value":999999000},{"value":29},{"value":0},{"value":1},{"value":256},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6863978720},"cpsr":{"value":1610616832},"fp":{"value":6173437408},"sp":{"value":6173437264},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6863721420},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":41},{"imageOffset":28896,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":40},{"imageOffset":1852820,"symbol":"QWaitConditionPrivate::wait_relative(QDeadlineTimer)","symbolLocation":180,"imageIndex":4},{"imageOffset":1851988,"symbol":"QWaitConditionPrivate::wait(QDeadlineTimer)","symbolLocation":84,"imageIndex":4},{"imageOffset":1851800,"symbol":"QWaitCondition::wait(QMutex*, QDeadlineTimer)","symbolLocation":108,"imageIndex":4},{"imageOffset":1834728,"symbol":"QThreadPoolThread::run()","symbolLocation":600,"imageIndex":4},{"imageOffset":1811068,"symbol":"QThreadPrivate::start(void*)","symbolLocation":308,"imageIndex":4},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":40},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":40}]}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4299735040,
+    "CFBundleIdentifier" : "com.yourcompany.PuzzleGame",
+    "size" : 2048000,
+    "uuid" : "57367477-4a02-3379-98d6-a9aa58ce66cf",
+    "path" : "\/Users\/USER\/Library\/Mobile Documents\/com~apple~CloudDocs\/*\/PuzzleGame.app\/Contents\/MacOS\/PuzzleGame",
+    "name" : "PuzzleGame"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4312203264,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "org.qt-project.QtWidgets",
+    "size" : 4030464,
+    "uuid" : "9f70323a-df5f-3c2f-8e0b-5886513a6d99",
+    "path" : "\/opt\/homebrew\/*\/QtWidgets.framework\/Versions\/A\/QtWidgets",
+    "name" : "QtWidgets",
+    "CFBundleVersion" : "6.9.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4326457344,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "org.qt-project.QtGui",
+    "size" : 4423680,
+    "uuid" : "cda6be5d-710e-3861-8eb0-7676ea9e2950",
+    "path" : "\/opt\/homebrew\/*\/QtGui.framework\/Versions\/A\/QtGui",
+    "name" : "QtGui",
+    "CFBundleVersion" : "6.9.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4305387520,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "org.qt-project.QtNetwork",
+    "size" : 1130496,
+    "uuid" : "f6a1858f-aee7-34ed-867f-b04c65f29177",
+    "path" : "\/opt\/homebrew\/*\/QtNetwork.framework\/Versions\/A\/QtNetwork",
+    "name" : "QtNetwork",
+    "CFBundleVersion" : "6.9.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4333912064,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "org.qt-project.QtCore",
+    "size" : 3915776,
+    "uuid" : "19b92468-8f1e-3883-a8ca-639618760c43",
+    "path" : "\/opt\/homebrew\/*\/QtCore.framework\/Versions\/A\/QtCore",
+    "name" : "QtCore",
+    "CFBundleVersion" : "6.9.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4302553088,
+    "size" : 131072,
+    "uuid" : "6b34bd7f-9320-3883-9a5d-e8542c9b17ca",
+    "path" : "\/opt\/homebrew\/*\/liblzma.5.dylib",
+    "name" : "liblzma.5.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4302962688,
+    "size" : 147456,
+    "uuid" : "f279e392-5936-3ad4-a017-e5eb186625e8",
+    "path" : "\/opt\/homebrew\/*\/libpng16.16.dylib",
+    "name" : "libpng16.16.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4303716352,
+    "size" : 409600,
+    "uuid" : "b82d8039-c589-3775-a450-26790d5b7f6b",
+    "path" : "\/opt\/homebrew\/*\/libtiff.6.dylib",
+    "name" : "libtiff.6.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4302438400,
+    "size" : 32768,
+    "uuid" : "b3fe47f3-406c-3916-bdd0-cf7f7ae8d9fa",
+    "path" : "\/opt\/homebrew\/*\/libgif.7.2.0.dylib",
+    "name" : "libgif.7.2.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4304257024,
+    "size" : 376832,
+    "uuid" : "905d524c-0642-3b18-95ed-cd3a79553001",
+    "path" : "\/opt\/homebrew\/*\/libjpeg.8.3.2.dylib",
+    "name" : "libjpeg.8.3.2.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4308156416,
+    "size" : 573440,
+    "uuid" : "afd03688-5fac-3b3d-96aa-9d88c034ff23",
+    "path" : "\/opt\/homebrew\/*\/libzstd.1.5.7.dylib",
+    "name" : "libzstd.1.5.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4310220800,
+    "size" : 1032192,
+    "uuid" : "b687969a-6a97-398a-af7b-2eb843dc12fe",
+    "path" : "\/opt\/homebrew\/*\/libglib-2.0.0.dylib",
+    "name" : "libglib-2.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4319035392,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "org.qt-project.QtDBus",
+    "size" : 458752,
+    "uuid" : "6710bb87-51a4-3719-ad70-af3c931fd32e",
+    "path" : "\/opt\/homebrew\/*\/QtDBus.framework\/Versions\/A\/QtDBus",
+    "name" : "QtDBus",
+    "CFBundleVersion" : "6.9.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4320034816,
+    "size" : 786432,
+    "uuid" : "3d359291-b602-39fc-8112-8876e0ebaec3",
+    "path" : "\/opt\/homebrew\/*\/libharfbuzz.0.dylib",
+    "name" : "libharfbuzz.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4303405056,
+    "size" : 49152,
+    "uuid" : "bbb78130-97b1-3019-9bb2-db21119d3562",
+    "path" : "\/opt\/homebrew\/*\/libmd4c.0.5.2.dylib",
+    "name" : "libmd4c.0.5.2.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4308844544,
+    "size" : 507904,
+    "uuid" : "cfd169d0-526f-3a45-b5db-836906fec3d7",
+    "path" : "\/opt\/homebrew\/*\/libfreetype.6.dylib",
+    "name" : "libfreetype.6.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4302880768,
+    "size" : 16384,
+    "uuid" : "93f52c60-48bd-36b2-a68c-8e2861b94d50",
+    "path" : "\/opt\/homebrew\/*\/libgthread-2.0.0.dylib",
+    "name" : "libgthread-2.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4307484672,
+    "size" : 163840,
+    "uuid" : "f9485a9d-d20a-3fc3-b68f-9ebd5a52cac9",
+    "path" : "\/opt\/homebrew\/*\/libintl.8.dylib",
+    "name" : "libintl.8.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4311597056,
+    "size" : 507904,
+    "uuid" : "a9da24ef-74d4-397b-ab16-1d18e55a653b",
+    "path" : "\/opt\/homebrew\/*\/libpcre2-8.0.dylib",
+    "name" : "libpcre2-8.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4309499904,
+    "size" : 196608,
+    "uuid" : "5a4bc5e5-db6a-3868-bb6b-ad48a19ac041",
+    "path" : "\/opt\/homebrew\/*\/libdbus-1.3.dylib",
+    "name" : "libdbus-1.3.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4340154368,
+    "size" : 1785856,
+    "uuid" : "6c0f5599-2c90-33c5-8a77-33c654b11c06",
+    "path" : "\/opt\/homebrew\/*\/libicui18n.77.1.dylib",
+    "name" : "libicui18n.77.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4323164160,
+    "size" : 1277952,
+    "uuid" : "c48fd9eb-06bb-3a7b-b4c7-a6e7da9f8b92",
+    "path" : "\/opt\/homebrew\/*\/libicuuc.77.1.dylib",
+    "name" : "libicuuc.77.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4375511040,
+    "size" : 31899648,
+    "uuid" : "e996519b-b7ad-3d2c-94e9-1ca42fc9cfb0",
+    "path" : "\/opt\/homebrew\/*\/libicudata.77.1.dylib",
+    "name" : "libicudata.77.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4303503360,
+    "size" : 49152,
+    "uuid" : "99e1194f-a3c6-30df-a9a2-5183f8ea3775",
+    "path" : "\/opt\/homebrew\/*\/libdouble-conversion.3.3.0.dylib",
+    "name" : "libdouble-conversion.3.3.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4303618048,
+    "size" : 32768,
+    "uuid" : "c4431360-2960-3e50-b699-3691771ade27",
+    "path" : "\/opt\/homebrew\/*\/libb2.1.dylib",
+    "name" : "libb2.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4321869824,
+    "size" : 475136,
+    "uuid" : "2a50e5d5-125d-3ec1-9a8b-5db3f4595315",
+    "path" : "\/opt\/homebrew\/*\/libpcre2-16.0.dylib",
+    "name" : "libpcre2-16.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4307730432,
+    "size" : 81920,
+    "uuid" : "d07b94fc-f322-3e73-a5e0-727b6e8e8c90",
+    "path" : "\/opt\/homebrew\/*\/libgraphite2.3.2.1.dylib",
+    "name" : "libgraphite2.3.2.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4304732160,
+    "size" : 49152,
+    "uuid" : "8603b5fd-8c9a-3c86-baaa-d09531b0e8e3",
+    "path" : "\/opt\/homebrew\/*\/libbrotlidec.1.1.0.dylib",
+    "name" : "libbrotlidec.1.1.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4309827584,
+    "size" : 131072,
+    "uuid" : "3392de09-c979-339a-9bdb-88de244baa5e",
+    "path" : "\/opt\/homebrew\/*\/libbrotlicommon.1.1.0.dylib",
+    "name" : "libbrotlicommon.1.1.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4322426880,
+    "CFBundleShortVersionString" : "3.0",
+    "CFBundleIdentifier" : "com.apple.security.csparser",
+    "size" : 131072,
+    "uuid" : "3a905673-ada9-3c57-992e-b83f555baa61",
+    "path" : "\/System\/Library\/Frameworks\/Security.framework\/Versions\/A\/PlugIns\/csparser.bundle\/Contents\/MacOS\/csparser",
+    "name" : "csparser",
+    "CFBundleVersion" : "61439.140.12"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4344496128,
+    "size" : 638976,
+    "uuid" : "d10caf6a-65b9-3f6e-bef5-4e1eec1ba86d",
+    "path" : "\/opt\/homebrew\/*\/libqcocoa.dylib",
+    "name" : "libqcocoa.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4344299520,
+    "size" : 49152,
+    "uuid" : "a3faee04-0f8b-3428-9497-560c97eca6fb",
+    "path" : "\/usr\/lib\/libobjc-trampolines.dylib",
+    "name" : "libobjc-trampolines.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4606001152,
+    "size" : 147456,
+    "uuid" : "08070ab2-cc6d-3e6d-be57-a2fedb0800cd",
+    "path" : "\/opt\/homebrew\/*\/libqmacstyle.dylib",
+    "name" : "libqmacstyle.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4626726912,
+    "CFBundleShortVersionString" : "329.2",
+    "CFBundleIdentifier" : "com.apple.AGXMetalG15G-C0",
+    "size" : 7553024,
+    "uuid" : "5573a5a4-b145-30f4-b98f-6c84b8245c26",
+    "path" : "\/System\/Library\/Extensions\/AGXMetalG15G_C0.bundle\/Contents\/MacOS\/AGXMetalG15G_C0",
+    "name" : "AGXMetalG15G_C0",
+    "CFBundleVersion" : "329.2"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4785242112,
+    "size" : 49152,
+    "uuid" : "e13d87ca-c0e8-30f9-a0f2-761201ca2612",
+    "path" : "\/opt\/homebrew\/*\/libqjpeg.dylib",
+    "name" : "libqjpeg.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6864429056,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.CoreFoundation",
+    "size" : 5500928,
+    "uuid" : "8d45baee-6cc0-3b89-93fd-ea1c8e15c6d7",
+    "path" : "\/System\/Library\/Frameworks\/CoreFoundation.framework\/Versions\/A\/CoreFoundation",
+    "name" : "CoreFoundation",
+    "CFBundleVersion" : "3603"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 7059832832,
+    "CFBundleShortVersionString" : "2.1.1",
+    "CFBundleIdentifier" : "com.apple.HIToolbox",
+    "size" : 3174368,
+    "uuid" : "1a037942-11e0-3fc8-aad2-20b11e7ae1a4",
+    "path" : "\/System\/Library\/Frameworks\/Carbon.framework\/Versions\/A\/Frameworks\/HIToolbox.framework\/Versions\/A\/HIToolbox",
+    "name" : "HIToolbox"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6930903040,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.AppKit",
+    "size" : 21564992,
+    "uuid" : "860c164c-d04c-30ff-8c6f-e672b74caf11",
+    "path" : "\/System\/Library\/Frameworks\/AppKit.framework\/Versions\/C\/AppKit",
+    "name" : "AppKit",
+    "CFBundleVersion" : "2575.70.52"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6860144640,
+    "size" : 636280,
+    "uuid" : "3247e185-ced2-36ff-9e29-47a77c23e004",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6863949824,
+    "size" : 51784,
+    "uuid" : "d6494ba9-171e-39fc-b1aa-28ecf87975d1",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6863704064,
+    "size" : 243284,
+    "uuid" : "6e4a96ad-04b8-3e8a-b91d-087e62306246",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 8586874880,
+    "CFBundleShortVersionString" : "6.5.4",
+    "CFBundleIdentifier" : "com.apple.SwiftUICore",
+    "size" : 12329376,
+    "uuid" : "84fe33b3-a5db-3ca3-90cc-4d258172e788",
+    "path" : "\/System\/Library\/Frameworks\/SwiftUICore.framework\/Versions\/A\/SwiftUICore",
+    "name" : "SwiftUICore",
+    "CFBundleVersion" : "6.5.4"
+  }
+],
+  "sharedCache" : {
+  "base" : 6859309056,
+  "size" : 5040898048,
+  "uuid" : "4c1223e5-cace-3982-a003-6110a7a8a25c"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=1.7G resident=0K(0%) swapped_out_or_unallocated=1.7G(100%)\nWritable regions: Total=1.6G written=819K(0%) resident=819K(0%) swapped_out=0K(0%) unallocated=1.6G(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nAccelerate framework               128K        1 \nActivity Tracing                   256K        1 \nCG image                            96K        6 \nColorSync                          544K       28 \nCoreAnimation                      288K       18 \nCoreGraphics                        48K        2 \nCoreUI image data                 1488K       11 \nFoundation                          16K        1 \nKernel Alloc Once                   32K        1 \nMALLOC                             1.6G       58 \nMALLOC guard page                  288K       18 \nSTACK GUARD                       56.2M       11 \nStack                             13.3M       12 \nVM_ALLOCATE                        112K        7 \n__AUTH                            5362K      680 \n__AUTH_CONST                      75.6M      917 \n__CTF                               824        1 \n__DATA                            25.4M      925 \n__DATA_CONST                      27.7M      958 \n__DATA_DIRTY                      2762K      335 \n__FONT_DATA                        2352        1 \n__INFO_FILTER                         8        1 \n__LINKEDIT                       631.7M       36 \n__OBJC_RO                         61.4M        1 \n__OBJC_RW                         2396K        1 \n__TEXT                             1.1G      978 \n__TEXT (graphics)                 8000K        2 \n__TPRO_CONST                       128K        2 \ndyld private memory                768K        6 \nmapped file                      548.0M       63 \npage table in kernel               819K        1 \nshared memory                     1424K       17 \n===========                     =======  ======= \nTOTAL                              4.1G     5100 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "logWritingSignature" : "8dd93a1e39731d8e22a05224211e932143afa604",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "63f9578e238e7b23a1f3030a",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000005
+    },
+    {
+      "rolloutId" : "5ffde50ce2aacd000d47a95f",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000496
+    }
+  ],
+  "experiments" : [
+
+  ]
+}
+}
+
