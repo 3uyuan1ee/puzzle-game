@@ -1,5 +1,8 @@
 # 🧩 Puzzle Game / 拼图游戏
-
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-green.svg)](#)
+[![Qt](https://img.shields.io/badge/Qt-5%2F6-brightgreen.svg)](#)
+[![C++](https://img.shields.io/badge/C%2B%2B-17-blue.svg)](#)
 A modern Qt-based puzzle game application with multiple difficulty levels, game modes, and networking features. Built with C++ and Qt framework.
 
 基于Qt框架开发的现代拼图游戏应用，支持多种难度级别、游戏模式和网络功能。使用C++和Qt框架构建。
